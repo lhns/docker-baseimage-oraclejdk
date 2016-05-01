@@ -1,0 +1,1 @@
+# docker-baseimage-oracle-jdk
