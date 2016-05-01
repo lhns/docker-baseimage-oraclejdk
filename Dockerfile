@@ -1,11 +1,12 @@
 FROM phusion/baseimage:latest
 MAINTAINER LolHens <pierrekisters@gmail.com>
 
+RUN add-apt-repository -y ppa:webupd8team/java
+
 RUN echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-selections && \
-    echo debconf shared/accepted-oracle-license-v1-1 seen true | debconf-set-selections && \
-    add-apt-repository -y ppa:webupd8team/java && \
-    apt-get update && \
-    apt-get install -y \
+    echo debconf shared/accepted-oracle-license-v1-1 seen true | debconf-set-selections
+
+RUN apt-get update && apt-get install -y \
     oracle-java8-installer \
     oracle-java8-set-default \
     unzip
