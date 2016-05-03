@@ -11,9 +11,8 @@ RUN apt-get update && apt-get install -y \
     oracle-java8-installer \
     oracle-java8-set-default \
     unzip \
-    wget
-
-RUN apt-get clean && \
+    wget && \
+    apt-get clean && \
     rm -rf \
     /tmp/* \
     /var/tmp/* \
