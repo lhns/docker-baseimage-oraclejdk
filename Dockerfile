@@ -13,4 +13,8 @@ RUN apt-get update && apt-get install -y \
     unzip \
     wget && \
     apt-get clean && \
-    rm -rf /usr/lib/jvm/java-8-oracle/*src.zip
+    rm -rf \
+    /tmp/* \
+    /var/tmp/* \
+    /var/lib/apt/lists/* \
+    /usr/lib/jvm/java-8-oracle/*src.zip
