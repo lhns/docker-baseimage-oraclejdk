@@ -16,5 +16,7 @@ RUN apt-get update && apt-get install -y \
  && rm -rf \
       /tmp/* \
       /var/tmp/* \
+      /var/log/* \
+      /var/cache/* \
       /var/lib/apt/lists/* \
       /usr/lib/jvm/java-8-oracle/*src.zip
