@@ -1,5 +1,8 @@
-FROM debian:jessie
+FROM lolhens/baseimage
 MAINTAINER LolHens <pierrekisters@gmail.com>
+
+
+ADD main/src/sh/cleanjava.sh /tmp/cleanjava
 
 
 RUN echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" | tee /etc/apt/sources.list.d/webupd8team-java.list \
@@ -8,17 +11,9 @@ RUN echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" | te
 
 RUN echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections
 
-RUN apt-get update && apt-get install -y \
+RUN apt-get update \
+ && apt-get -y install \
       oracle-java8-installer \
-      oracle-java8-set-default \
-      unzip \
-      wget \
- && apt-get autoremove -y \
- && apt-get clean -y \
- && rm -rf \
-      /tmp/* \
-      /var/tmp/* \
-      /var/log/* \
-      /var/cache/* \
-      /var/lib/apt/lists/* \
-      /usr/lib/jvm/java-8-oracle/*src.zip
+      oracle-java8-set-default
+ && /tmp/cleanjava
+ && cleanimage

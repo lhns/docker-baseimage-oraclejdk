@@ -1,6 +1,6 @@
 # Baseimage with OracleJDK8
 ### Contains
-* debain:jessie
+* lolhens/baseimage
 * OracleJDK8
 * wget
 * unzip
