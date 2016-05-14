@@ -1,4 +1,4 @@
-FROM lolhens/baseimage:latest
+FROM lolhens/baseimage:1.0.0
 MAINTAINER LolHens <pierrekisters@gmail.com>
 
 
