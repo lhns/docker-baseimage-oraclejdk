@@ -31,7 +31,7 @@ rm -rf \
   "/usr/lib/jvm/java-8-oracle/jre/lib/deploy.jar" \
   "/usr/lib/jvm/java-8-oracle/jre/lib/deploy/"* \
   "/usr/lib/jvm/java-8-oracle/jre/lib/desktop/"* \
-  "/usr/lib/jvm/java-8-oracle/jre/lib/ext/"* \
+  "/usr/lib/jvm/java-8-oracle/jre/lib/ext/jfxrt.jar" \
   "/usr/lib/jvm/java-8-oracle/jre/lib/javaws.jar" \
   "/usr/lib/jvm/java-8-oracle/jre/lib/jfr" \
   "/usr/lib/jvm/java-8-oracle/jre/lib/jfr.jar" \
