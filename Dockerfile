@@ -2,7 +2,7 @@ FROM lolhens/baseimage:latest
 MAINTAINER LolHens <pierrekisters@gmail.com>
 
 
-COPY ["scripts/cleanjava", "/tmp/"]
+COPY ["bin/cleanjava", "/tmp/"]
 RUN chmod +x /tmp/cleanjava
 
 RUN echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" | tee /etc/apt/sources.list.d/webupd8team-java.list \
